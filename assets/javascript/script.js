@@ -14,26 +14,30 @@ function buttonModel(arrItem) { // HTML MARKUP FOR BUTTON DOM ELEMENTS
     return "<button class='btn' data-search='" + arrItem + "'>" + arrItem + "</button>"
 }
 
+function getNewTopic(e) {
+    $("#button-area").append(buttonModel(e));
+}
+
 // CONSTRUCT THE BUTTONS FROM TOPICS ARRAY
 for (let i = 0; i < topics.length; i++) {
     $("#button-area").append(buttonModel(topics[i]))
 }
 
-function addAnimateListener() {
-    $(document).on("click", ".gif", function() {
-        console.log("triggered");
-        var state = $(this).attr("data-state");
-        if (state === "still") {
-            $(this).attr("src", $(this).attr("data-animated"));
-            $(this).attr("data-state", "animated");
-          } else if (state === "animated") {
-            $(this).attr("src", $(this).attr("data-still"));
-            $(this).attr("data-state", "still");
-          }
-    })
-}
 
-$(".btn").on("click", function() {
+$(document).on("click", ".gif", function() {
+    console.log("triggered");
+    var state = $(this).attr("data-state");
+    if (state === "still") {
+        $(this).attr("src", $(this).attr("data-animated"));
+        $(this).attr("data-state", "animated");
+        } else if (state === "animated") {
+        $(this).attr("src", $(this).attr("data-still"));
+        $(this).attr("data-state", "still");
+        }
+})
+
+
+$(document).on("click", ".btn", function() {
     var searchTerm = $(this).attr("data-search");
     console.log(searchTerm);
     var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + searchTerm + "&api_key=eG2Lv5jBWCBc6paULljFPRmKiTrwDLzI&limit=10";
@@ -49,13 +53,20 @@ $(".btn").on("click", function() {
         for (let i = 0; i < results.length; i++) { // LOOP TO OUTPUT 10 GIFS
             var still = results[i].images.original_still.url;
             var animated = results[i].images.downsized.url;
+            var rating = results[i].rating;
             var img = "<img src='"+ results[i].images.original_still.url +"' data-still="+ still + " data-animated="+ animated +" data-state='still' class='gif'/>";
-            $(".main-body").append(img);            
+            var ratingText = "<span class='rating'>"+ rating +"</span>";
+            $(".main-body").prepend(img, ratingText);            
         }
     })
-    addAnimateListener();
 });
 
+$("#submit_button").on("click", function(e) {
+    e.preventDefault()
+    var newTopic = $("#newTopic").val();
+    console.log(newTopic);
+    getNewTopic(newTopic);
+});
 
 
 

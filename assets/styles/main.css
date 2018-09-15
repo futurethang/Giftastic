@@ -1,0 +1,39 @@
+body {
+    background-color: rgb(255, 188, 188);
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.button-area {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    /* justify-content: center;
+    align-content: center; */
+}
+
+.main-body {
+    background: url(https://media.giphy.com/media/EO9j0o6pHdYmk/giphy.gif) no-repeat center center;
+    background-size: cover;
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.imgDiv {
+    border: 1px dashed #fff;
+    display: flex;
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: cover;
+    /* overflow: hidden; */
+    justify-content: center;
+    align-content: center;
+}
+
+.imgDiv img {
+    align-self: center;
+    max-height:100%; 
+    /* max-width:100%; */
+}

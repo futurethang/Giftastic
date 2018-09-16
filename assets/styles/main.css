@@ -1,39 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Coming+Soon|Gaegu|Just+Me+Again+Down+Here|Permanent+Marker|Reenie+Beanie|Shadows+Into+Light|Waiting+for+the+Sunrise');
+
 body {
-    background-color: rgb(255, 188, 188);
+    background: url(../imgs/VHS_BG.jpg) repeat aliceblue;
+    /* background-color: rgb(255, 188, 188); */
 }
 
 .header {
+    padding: 0 40px;
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: minmax(max-content, 400px) minmax(100px, 1fr);
+    justify-self: center;
+    align-self: center;
+}
+
+.header h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 8vmax;
+    justify-self: center;
+    align-self: center;
+}
+
+.header nav {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    justify-self: center;
+    align-self: center;
+}
+
+.header nav form{
+    padding: 40px 0;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: stretch;
+    align-self: center
 }
 
 .button-area {
+    margin: 20px 0 20px 0;
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    /* justify-content: center;
-    align-content: center; */
-}
-
-.main-body {
-    background: url(https://media.giphy.com/media/EO9j0o6pHdYmk/giphy.gif) no-repeat center center;
-    background-size: cover;
-    display: inline-grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.imgDiv {
-    border: 1px dashed #fff;
-    display: flex;
-    max-width: 200px;
-    max-height: 200px;
-    object-fit: cover;
-    /* overflow: hidden; */
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(10px, 1fr));   
     justify-content: center;
     align-content: center;
 }
 
+.btn { 
+    width: 282px;
+    height: 45px;
+    background-image: url(../imgs/tape.jpg);
+    padding-top: 4px;
+    padding-left: 15px;
+    font-size: 1.5rem;
+    font-family: 'Reenie Beanie', cursive;
+    -webkit-box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.75);
+    justify-content: center;
+    align-content: center;
+    justify-self: center;
+    align-self: center;
+}
+
+.main-body {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: url(https://media.giphy.com/media/oEI9uBYSzLpBK/giphy.gif) no-repeat center center;
+    background-size: cover;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.imgDiv {
+    /* border: 1px dashed #fff; */
+    margin:20px 0;
+    display: flex;
+    max-width: 400px;
+    max-height: 400px;
+    object-fit: cover;
+    /* overflow: hidden; */
+    justify-content: center;
+    align-content: center;
+    justify-self: center;
+    align-self: center;
+}
+
 .imgDiv img {
     align-self: center;
-    max-height:100%; 
+    /* max-height:100%;  */
+    width: 385px;
+    height: 289px;
     /* max-width:100%; */
 }

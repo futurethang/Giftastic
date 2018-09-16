@@ -1,11 +1,11 @@
 var topics = [
-    "Climate Change",
+    "Goonies",
     "ALF",
     "Star Trek",
-    "Country Music",
-    "Books",
-    "Buffalo Wings",
-    "Adventure Time",
+    "Return of the Jedi",
+    "Ren & Stimpy",
+    "Labyrinth",
+    "Raiders of the Lost Ark",
 ]
 
 function buttonModel(arrItem) { // HTML MARKUP FOR BUTTON DOM ELEMENTS

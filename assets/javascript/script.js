@@ -5,7 +5,6 @@ var topics = [
     "Return of the Jedi",
     "Ren & Stimpy",
     "Labyrinth",
-    "Raiders of the Lost Ark",
 ]
 
 function buttonModel(arrItem) { // HTML MARKUP FOR BUTTON DOM ELEMENTS
@@ -70,14 +69,13 @@ $(document).on("click", ".btn", function () {
         for (let i = 0; i < results.length; i++) { // LOOP TO OUTPUT 10 GIFS
             var still = results[i].images.original_still.url;
             var animated = results[i].images.downsized.url;
-            // autoSize(still);
-            // autoSize(animated);
             var rating = results[i].rating;
             var img = "<img src='" + results[i].images.original_still.url + "' data-still=" + still + " data-animated=" + animated + " data-state='still' class='gif'/>";
-            var ratingText = "<span class='rating'>" + rating + "</span>";
+            var ratingText = "Rated: <span class='rating'>" + rating + "</span>";
+            var overlayDiv =   "<div class='overlay'><div class='text'>"+ ratingText +"</div></div>";
             var imgDiv = $("<div class='imgDiv'>");
             imgDiv.append(img)
-            // $(".main-body").prepend(img, ratingText);
+            imgDiv.append(overlayDiv)
             $(".main-body").prepend(imgDiv);
         }
     })

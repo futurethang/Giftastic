@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Coming+Soon|Gaegu|Just+Me+Again+Down+Here|Permanent+Marker|Reenie+Beanie|Shadows+Into+Light|Waiting+for+the+Sunrise');
+@import url('https://fonts.googleapis.com/css?family=Coming+Soon|Gaegu|Just+Me+Again+Down+Here|Permanent+Marker|Reenie+Beanie|Shadows+Into+Light|Waiting+for+the+Sunrise|Press+Start+2P');
 
 body {
     background: url(../imgs/VHS_BG.jpg) repeat aliceblue;
@@ -7,35 +7,52 @@ body {
 
 .header {
     padding: 0 40px;
-    display: grid;
-    grid-template-columns: minmax(max-content, 400px) minmax(100px, 1fr);
+    height: 100px;
     justify-self: center;
     align-self: center;
 }
 
 .header h1 {
     font-family: 'Permanent Marker', cursive;
-    font-size: 8vmax;
-    justify-self: center;
-    align-self: center;
+    font-size: 6vmax;
+    text-align: center;
 }
 
-.header nav {
-    display: flex;
+@media only screen and (max-width: 600px) {
+    .header {
+        height: 50px;
+    }
+    .header h1 {
+        font-size: 3em;
+    }
+} 
+@media only screen and (max-width: 900px) {
+    .header {
+        height: 75px;
+    }
+} 
+
+nav {
+    margin: 50px 0;
+    display: grid;
+    grid-gap: 5px;
     justify-content: center;
     align-content: center;
-    justify-self: center;
-    align-self: center;
 }
 
-.header nav form{
-    padding: 40px 0;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-content: stretch;
-    align-self: center
+#newTopic {
+    font-family: 'Reenie Beanie', cursive;
+}
+
+#submit_button {
+    position: relative;
+    width: 142px;
+    height: 20px;
+    background-image: url(../imgs/submit_tape.jpg);
+    align-self: center;
+    padding-left: 15px;
+    bottom: 5px;
+    cursor: pointer;
 }
 
 .button-area {
@@ -62,6 +79,7 @@ body {
     align-content: center;
     justify-self: center;
     align-self: center;
+    cursor: pointer;
 }
 
 .main-body {
@@ -87,12 +105,63 @@ body {
     align-content: center;
     justify-self: center;
     align-self: center;
+    
+    position: relative;
+    width: 50%;
 }
 
 .imgDiv img {
     align-self: center;
+    display: block;
     /* max-height:100%;  */
     width: 385px;
     height: 289px;
     /* max-width:100%; */
 }
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: -25%;
+    right: 0;
+    background-color: rgba(0, 2, 3, 0.5);
+    overflow: hidden;
+    width: 150%;
+    height: 0;
+    transition: .5s ease;
+}
+  
+.imgDiv:hover .overlay {
+height: 15%;
+}
+
+.text {
+color: white;
+font-family: 'Press Start 2P', cursive;
+text-transform: uppercase;
+font-size: 20px;
+position: absolute;
+top: 50%;
+left: 50%;
+-webkit-transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+text-align: center;
+}
+
+/* 
+
+font-family: 'Reenie Beanie', cursive;
+
+font-family: 'Shadows Into Light', cursive;
+
+font-family: 'Permanent Marker', cursive;
+
+font-family: 'Coming Soon', cursive;
+
+font-family: 'Waiting for the Sunrise', cursive;
+
+font-family: 'Gaegu', cursive;
+
+font-family: 'Just Me Again Down Here', cursive;
+ */

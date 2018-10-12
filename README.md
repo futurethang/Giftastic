@@ -1,5 +1,5 @@
 # Giftastic
-A Gif app with HTML, CSS, jQuery, AJAX, and Giphy API. Fun for all ages!
+A Gif app with HTML, CSS, jQuery, AJAX, and Giphy API. Fun for all ages! [Try it out here](https://futurethang.github.io/Giftastic/)
 
 
 ### Instructions

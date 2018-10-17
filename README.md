@@ -1,7 +1,7 @@
 # Giftastic
 A Gif app with HTML, CSS, jQuery, AJAX, and Giphy API. Fun for all ages! [Try it out here](https://futurethang.github.io/Giftastic/)
 
-[Giftastic](https://user-images.githubusercontent.com/17099707/47065616-7a2ffe80-d198-11e8-8b50-d00c88ecddf3.png)
+![Giftastic](https://user-images.githubusercontent.com/17099707/47065616-7a2ffe80-d198-11e8-8b50-d00c88ecddf3.png)
 
 
 ## Project Goals
